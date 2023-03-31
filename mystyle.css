@@ -1,7 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
 }
-  
 h1 {
     color: rgb(232, 225, 125);
     margin-left: 20px;
@@ -61,7 +60,7 @@ div {
   font-weight: bold;
   text-align: center;
   justify-content: center;
-  font-size: xx-large;
+  font-size: xxx-large;
 }
 .game-container > * {
   width: 3rem;
@@ -71,9 +70,6 @@ div {
   width: 250px;
   height: 250px;
   margin-right: 2rem;
-}
-.game-info {
-  width: 100000000000;
 }
 .game-title {
   font-family: Arial;
