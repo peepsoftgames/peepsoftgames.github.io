@@ -8,7 +8,7 @@ h1 {
 div {
     display: flex;
     width: 900px;
-    height: 300px;    
+    height: 190px;    
     justify-content: space-between;
 }
 .logo-banner {
