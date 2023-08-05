@@ -5,21 +5,17 @@ mkdir Documents
 mkdir Programs
 mkdir Scripting
 mkdir Repos
+mkdir Videos
+mkdir Wallpapers
+mkdir Images
 xbps-install --sync
-echo "Installing C and Scripting related packages."
-xbps-install  -y tcc mercurial curl make gdb python3 python3-pip lua geckodriver vim git nasm
+echo "Installing Programming and Scripting packages"
+xbps-install  -y tcc mercurial curl make gdb python3 python3-pip lua geckodriver vim git nasm xxd SDL2 SDL2-devel
 pip install selenium pytest
 echo "Installing X packages for window managers"
 xbps-install -y  base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel
 echo "Installing cool programs"
-xbps-install -y  dwm st dmenu sent sxiv gimp firefox kdenlive i2pd neofetch mpv sc-im zathura surf
-echo "Compiling SDL2 for graphics programming"
-git clone https://github.com/libsdl-org/SDL.git -b SDL2
-cd SDL
-mkdir build
-cd build
-make clean install
-cd /
+xbps-install -y  dwm st dmenu sent sxiv gimp firefox kdenlive i2pd neofetch mpv sc-im zathura surf macchanger zathura-pdf-mupdf xwallpaper lf ImageMagick ffmpeg
 echo "Setting up Mutt + Yandex Email with offline syncing"
 echo "Yandex + Mutt enter your real name: "
 read RealName
@@ -27,7 +23,7 @@ echo "Yandex + Mutt enter your Yandex email: "
 read Email
 echo "Yandex + Mutt enter your app password: "
 read Password
-xbps-install mutt offlineimap
+xbps-install -y mutt offlineimap
 cd /root/
 echo "
 #We use VI here
@@ -70,18 +66,10 @@ echo "Email system finished setting up"
 offlineimap
 echo "Configuring X"
 cd ~
-echo "exec dwm" > .xinitrc
+echo "exec &dwm" > .xinitrc
 neofetch
 echo "Williams Void Installation Script has finished, check above for errors"
 sleep 5
 echo "Starting!"
 cd ~
-#echo"
-# .bashrc
-# If not running interactively, don't do anything
-#[[ $- != *i* ]] && return
-#alias ls='ls --color=auto'
-#PS1='[\u@\h \W]\$ '
-#if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty3 ]]; then exec startx; fi 
-#" > .bashrc
 startx
