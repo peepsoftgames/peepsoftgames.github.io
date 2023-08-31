@@ -1,0 +1,30 @@
+	CHRISTIAN FREE SOFTWARE LICENSE
+		    CFSL
+
+This software is free and open source charity ware, users are asked
+to donate to the Eastern Orthodox Church by any means.
+
+Redistribution of this project in source and/or binary forms with/without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions must retain this notice, the conditions, and the disclaimer.
+2. Redistributions must retain credit to the author, and signage to where the original
+work can be found.
+3. Redistributions cannot become a part of, in anyway shape or form, part of proprietary
+software, or software that is clearly out of line with Christian values.
+4. Redistributions must remain free, both in price, and what users may do with the software,
+the software must remain public and easily accessible.
+
+DISCLAIMER
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+
