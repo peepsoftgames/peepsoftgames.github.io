@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
 }
 div {
     display: flex;
-    width: 900px;
+    width: 1000px;
     height: 190px;    
     justify-content: space-between;
 }
@@ -48,5 +48,9 @@ color: #bfddf5;
 p {
 color : lemonchiffon;	
 }
-
- @font-face { font-family: Coolvectica; font-weight: bold; src: url('coolvetica rg.otf');}
+.moddb{
+color:lightpink;
+}
+.itchio{
+color:lightsteelblue;
+}

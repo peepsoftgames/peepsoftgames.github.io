@@ -1,6 +1,7 @@
-# This is an installation script for Void to automate this autism
-echo "Williams Void Installation Script"
-cd /
+#!/bin/sh 
+# Based installation script for Void to automate this autism, assuming user is root.
+printf "Williams Void Installation Script\n"
+cd ~/
 mkdir Documents
 mkdir Programs
 mkdir Scripting
@@ -9,22 +10,22 @@ mkdir Videos
 mkdir Wallpapers
 mkdir Images
 xbps-install --sync
-echo "Installing Programming and Scripting packages"
-xbps-install  -y tcc mercurial curl make gdb python3 python3-pip lua geckodriver vim git nasm xxd SDL2 SDL2-devel
+printf "Installing Programming and Scripting packages\n"
+xbps-install  -y tcc mercurial curl make gdb python3 python3-pip lua geckodriver vim git nasm xxd SDL2 SDL2-devel ksh
 pip install selenium pytest
-echo "Installing X packages for window managers"
+printf "Installing X packages for window managers\n"
 xbps-install -y  base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel
-echo "Installing cool programs"
-xbps-install -y  dwm st dmenu sent sxiv gimp firefox kdenlive i2pd neofetch mpv sc-im zathura surf macchanger zathura-pdf-mupdf xwallpaper lf ImageMagick ffmpeg
-echo "Setting up Mutt + Yandex Email with offline syncing"
-echo "Yandex + Mutt enter your real name: "
+printf "Installing cool programs\n"
+xbps-install -y  dwm st dmenu sent sxiv gimp firefox kdenlive i2pd neofetch sc-im zathura surf macchanger zathura-pdf-mupdf xwallpaper lf ImageMagick ffmpeg doas mdp xdotool xbindkeys powertop
+printf "Setting up Mutt + Yandex Email with offline syncing\n"
+printf "Yandex + Mutt enter your real name: \n"
 read RealName
-echo "Yandex + Mutt enter your Yandex email: "
+printf "Yandex + Mutt enter your Yandex email: \n"
 read Email
-echo "Yandex + Mutt enter your app password: "
+printf "Yandex + Mutt enter your app password: \n"
 read Password
 xbps-install -y mutt offlineimap
-cd /root/
+cd ~
 echo "
 #We use VI here
 set editor = "vi"
@@ -34,7 +35,7 @@ set realname = "$RealName"
 set ssl_starttls = yes
 set ssl_force_tls = yes
 set mbox_type = Maildir
-set folder = /root/Maildir
+set folder = ~/Maildir
 ##YANDEX IMAP
 set imap_user = "$Email" #Email
 set imap_pass = "$Password" #App Password
@@ -62,14 +63,21 @@ type = Maildir
 localfolders = Maildir
 restoreattime = no
 " > .offlineimaprc
-echo "Email system finished setting up"
+printf "Email system finished setting up\n"
 offlineimap
-echo "Configuring X"
+printf "Configuring X\n"
 cd ~
 echo "exec &dwm" > .xinitrc
+printf "Autooptimization via PowerTOP\n"
+powertop --calibrate
+powertop --auto-tune
 neofetch
-echo "Williams Void Installation Script has finished, check above for errors"
+printf "Helping you set up a printer\n"
+xbps-install -y cups cups-pdf epson-inkjet-printer-escpr system-config-printer
+ln -s /etc/sv/cups /var/service/
+sv start cups
+firefox http://localhost:631/
+printf "Williams Void Installation Script has finished, check above for errors\n"
 sleep 5
-echo "Starting!"
-cd ~
+printf "Starting!\n"
 startx
