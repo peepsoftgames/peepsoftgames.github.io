@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh
 # Based installation script for Void to automate this autism, assuming user is root.
 printf "Williams Void Installation Script\n"
 cd ~/
@@ -11,12 +11,11 @@ mkdir Wallpapers
 mkdir Images
 xbps-install --sync
 printf "Installing Programming and Scripting packages\n"
-xbps-install  -y tcc mercurial curl make gdb python3 python3-pip lua geckodriver vim git nasm xxd SDL2 SDL2-devel ksh
-pip install selenium pytest
-printf "Installing X packages for window managers\n"
+xbps-install  -y tcc mercurial curl make gdb lua vim git nasm xxd ksh
+printf "Installing X packages\n"
 xbps-install -y  base-devel libX11-devel libXft-devel libXinerama-devel freetype-devel fontconfig-devel
 printf "Installing cool programs\n"
-xbps-install -y  dwm st dmenu sent sxiv gimp firefox kdenlive i2pd neofetch sc-im zathura surf macchanger zathura-pdf-mupdf xwallpaper lf ImageMagick ffmpeg doas mdp xdotool xbindkeys powertop
+xbps-install -y  dwm st dmenu sent sxiv gimp surf  kdenlive i2pd neofetch sc-im zathura surf macchanger zathura-pdf-mupdf xwallpaper lf ImageMagick ffmpeg doas mdp xdotool xbindkeys powertop
 printf "Setting up Mutt + Yandex Email with offline syncing\n"
 printf "Yandex + Mutt enter your real name: \n"
 read RealName

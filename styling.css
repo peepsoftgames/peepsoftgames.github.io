@@ -1,56 +1,40 @@
-body {
-    background-color: black;
+body{
+    background-color:black;
+    color:lemonchiffon;
+    white-space: nowrap;
+    font-family: "Times New Roman", Times, serif;
 }
-div {
-    display: flex;
-    width: 1000px;
-    height: 190px;    
-    justify-content: space-between;
+
+a{
+    color:#bfddf5;
 }
-.img-banner {
-    display: flex;
-    align-items: center;
-}
-.flex > * {
-    padding: 1rem;
-}
-.content {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.flex a p {
-    font-family: Arial;
-    font-weight: bold;
-}
-.flex a {
-    color: rgb(197, 188, 106);
-}
-.game-container {
-display: flex; margin-bottom: 150px;
-}
-.welcome{
-  display: flex;
-  align-items: center;
-  font-family:'coolvectica'; 
-  font-weight: bold;
-  text-align: center;
-  justify-content: center;
-  font-size: xxx-large;
-  color:rgb(232, 225, 125);
-}
-a {
-color: #bfddf5;
-}
-p {
-color : lemonchiffon;	
-}
-.moddb{
-color:lightpink;
-}
+
 .itchio{
-color:lightsteelblue;
+    color:lightsteelblue;
+}
+
+.moddb{
+    color:pink;
+}
+
+.flex{
+    color:lemonchiffon;
+}
+
+.imgbanner{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+
+.navbar{
+    color:lemonchiffon;
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+}
+
+.welcome{
+    font-size:xxx-large;
+    font-weight: bold;
 }
